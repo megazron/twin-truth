@@ -2,7 +2,7 @@
 
 ![demo](docs/img/demo.gif)
 
-*RViz simulation (Kinova Gen3). Before vs after.*
+*Four test scenarios in RViz (Kinova Gen3).*
 
 **One dated source of truth for every physical constant in a digital twin. Generated everywhere. Drift is a failing test, not a comment.**
 
