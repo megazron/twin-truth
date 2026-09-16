@@ -82,10 +82,10 @@ def five_places():
     label(30, 56, "each copy guarded by a comment: \"keep in step with the config file\"", color=MUTED, size=12, italic=True)
     places = [
         (40, 90, "config/home_positions_*.txt", "declared source, 5 consumers", False),
-        (40, 160, "srl_dual.urdf.xacro (left)", "initial_positions block", False),
-        (40, 230, "srl_dual.urdf.xacro (right)", "initial_positions block", False),
+        (40, 160, "robot.urdf.xacro (left)", "initial_positions block", False),
+        (40, 230, "robot.urdf.xacro (right)", "initial_positions block", False),
         (40, 300, "pot_bridge.py", "hard-coded copy", True),
-        (40, 370, "srl_teleop_node.py", "hard-coded copy", True),
+        (40, 370, "teleop_node.py", "hard-coded copy", True),
     ]
     for x, y, t, sub, bad in places:
         box(x, y, 250, 52, t, sub, stroke=ACCENT2 if bad else MUTED, fill="#fff4e6" if bad else "white")

@@ -4,7 +4,6 @@
 
 *RViz simulation (Kinova Gen3). Before vs after.*
 
-
 **One dated source of truth for every physical constant in a digital twin. Generated everywhere. Drift is a failing test, not a comment.**
 
 A digital twin is only as good as the numbers that describe the metal: home poses, link lengths, the height of the table, the size of the person standing in the workspace. Those numbers have a way of getting copied. This tool makes each of them live in exactly one place, with a unit, a date, a method and a tolerance, generates every consumer file from it, and fails CI the day a copy appears anywhere else.
@@ -22,8 +21,6 @@ CHECK FAILED
 Pure Python 3.10+, one dependency (PyYAML), no ROS required.
 
 ## The problem
-
-On the rig this came from, a wearable dual-arm robot with two Kinova Gen3 arms and a Gazebo/MoveIt twin, the twin was accurate to the millimetre and it stayed that way. But not for free. Three things went wrong first:
 
 - **The home pose lived in FIVE places, not two.** A config text file was the declared source. The URDF carried it twice, once per arm, as the sim's spawn pose. Two nodes carried their own hard-coded copies, and both published straight to the arm controllers. When home moved on 2026-08-15 after the whole task set had been re-measured, those two copies would have driven the real arms to the superseded pose. Each copy had a comment beside it saying "keep in step with the config file". A comment cannot fail.
 - **Two work-surface heights, 150 mm apart.** `BENCH_TOP = 1.10` positioned every object; `TABLE_TOP = 0.950` was the only geometry anything collided with. Nothing compared them. Objects floated, the planner reasoned about a table that was not where the objects were, and the discrepancy was only found by measuring clearance geometrically.
@@ -210,12 +207,6 @@ A tape measure and a solid model, independently, agreeing to about 1 %. It was t
 - **The check is structural, not a match on old numbers.** A test that looks for the previous value passes the moment someone updates the copy once. A test that looks for the *shape* of a copy keeps firing.
 - **A claim has a date.** Physical facts are re-measured, not inherited.
 - **Refuse rather than guess.** A missing tolerance, an unknown unit, an unwrapped continuous joint: the tool stops and names the key.
-
-## Origin
-
-Built from the MSc project *Multimodal control of a wearable dual-arm robotic system for assisted object manipulation* (Imperial College London, 2026): two Kinova Gen3 arms on a backpack frame, a 7-DoF master mannequin, a Gazebo/MoveIt digital twin, and a sim-to-real bridge that would only enable when the twin and the metal agreed. Project repository: <https://github.com/megazron/Multimodal-control-of-a-wearable-dual-arm-robotic-system-for-assisted-object-manipulation>.
-
-Part of a set of five plug-and-play toolkits distilled from that work. Author: Gaus Mohiuddin Sayyad.
 
 ## Figures
 
