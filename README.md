@@ -1,5 +1,10 @@
 # twin-truth
 
+![demo](docs/img/demo.gif)
+
+*RViz simulation (Kinova Gen3). Before vs after.*
+
+
 **One dated source of truth for every physical constant in a digital twin. Generated everywhere. Drift is a failing test, not a comment.**
 
 A digital twin is only as good as the numbers that describe the metal: home poses, link lengths, the height of the table, the size of the person standing in the workspace. Those numbers have a way of getting copied. This tool makes each of them live in exactly one place, with a unit, a date, a method and a tolerance, generates every consumer file from it, and fails CI the day a copy appears anywhere else.
