@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="13">
+<rect width="1180" height="560" fill="white"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7b8794"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e8590c"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0b7285"/></marker></defs>
+<text x="30" y="36" fill="#1f2933" font-size="15" text-anchor="start" font-weight="bold">BEFORE: the home pose typed into five places</text>
+<text x="30" y="56" fill="#7b8794" font-size="12" text-anchor="start" font-style="italic">each copy guarded by a comment: "keep in step with the config file"</text>
+<rect x="40" y="90" width="250" height="52" rx="6" fill="white" stroke="#7b8794" stroke-width="1.5"/>
+<text x="165.0" y="112.0" text-anchor="middle" fill="#1f2933">config/home_positions_*.txt</text>
+<text x="165.0" y="130.0" text-anchor="middle" fill="#7b8794" font-size="11">declared source, 5 consumers</text>
+<rect x="40" y="160" width="250" height="52" rx="6" fill="white" stroke="#7b8794" stroke-width="1.5"/>
+<text x="165.0" y="182.0" text-anchor="middle" fill="#1f2933">srl_dual.urdf.xacro (left)</text>
+<text x="165.0" y="200.0" text-anchor="middle" fill="#7b8794" font-size="11">initial_positions block</text>
+<rect x="40" y="230" width="250" height="52" rx="6" fill="white" stroke="#7b8794" stroke-width="1.5"/>
+<text x="165.0" y="252.0" text-anchor="middle" fill="#1f2933">srl_dual.urdf.xacro (right)</text>
+<text x="165.0" y="270.0" text-anchor="middle" fill="#7b8794" font-size="11">initial_positions block</text>
+<rect x="40" y="300" width="250" height="52" rx="6" fill="#fff4e6" stroke="#e8590c" stroke-width="1.5"/>
+<text x="165.0" y="322.0" text-anchor="middle" fill="#1f2933">pot_bridge.py</text>
+<text x="165.0" y="340.0" text-anchor="middle" fill="#7b8794" font-size="11">hard-coded copy</text>
+<rect x="40" y="370" width="250" height="52" rx="6" fill="#fff4e6" stroke="#e8590c" stroke-width="1.5"/>
+<text x="165.0" y="392.0" text-anchor="middle" fill="#1f2933">srl_teleop_node.py</text>
+<text x="165.0" y="410.0" text-anchor="middle" fill="#7b8794" font-size="11">hard-coded copy</text>
+<line x1="165" y1="142" x2="165" y2="160" stroke="#7b8794" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="5 4"/>
+<line x1="165" y1="212" x2="165" y2="230" stroke="#7b8794" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="5 4"/>
+<line x1="165" y1="282" x2="165" y2="300" stroke="#7b8794" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="5 4"/>
+<line x1="165" y1="352" x2="165" y2="370" stroke="#7b8794" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="5 4"/>
+<text x="176" y="156" fill="#7b8794" font-size="10" font-style="italic"># keep these in step</text>
+<rect x="360" y="315" width="180" height="52" rx="6" fill="white" stroke="#e8590c" stroke-width="1.5"/>
+<text x="450.0" y="337.0" text-anchor="middle" fill="#1f2933" font-weight="bold">arm controllers</text>
+<text x="450.0" y="355.0" text-anchor="middle" fill="#7b8794" font-size="11">/left_arm_controller ...</text>
+<line x1="290" y1="326" x2="360" y2="334" stroke="#e8590c" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="290" y1="396" x2="360" y2="352" stroke="#e8590c" stroke-width="2" marker-end="url(#ar)"/>
+<text x="365" y="300" fill="#e8590c" font-size="11" text-anchor="start" font-weight="bold">publish straight to the metal</text>
+<rect x="40" y="445" width="500" height="70" rx="6" fill="#fff4e6" stroke="#e8590c"/>
+<text x="56" y="468" fill="#1f2933" font-size="12" text-anchor="start" font-weight="bold">2026-08-15: home moved after the task set was re-measured.</text>
+<text x="56" y="486" fill="#1f2933" font-size="12" text-anchor="start">Two of the five copies were installed executables no launch file referenced.</text>
+<text x="56" y="503" fill="#1f2933" font-size="12" text-anchor="start">Nothing exercised them; each was one `ros2 run` away from driving the superseded pose.</text>
+<line x1="590" y1="30" x2="590" y2="530" stroke="#e5e9ee" stroke-width="2"/>
+<text x="620" y="36" fill="#1f2933" font-size="15" text-anchor="start" font-weight="bold">AFTER: one dated owner, generated everywhere, drift is a red build</text>
+<rect x="620" y="80" width="230" height="110" rx="6" fill="#e3fafc" stroke="#0b7285" stroke-width="1.5"/>
+<text x="735.0" y="140.0" text-anchor="middle" fill="#1f2933"></text>
+<text x="735" y="100" fill="#1f2933" font-size="13" text-anchor="middle" font-weight="bold">truth.yaml</text>
+<text x="632" y="124" fill="#1f2933" font-size="11" font-family="DejaVu Sans Mono, monospace">value: [0.0, 0.26, 3.10, ...]</text>
+<text x="632" y="140" fill="#1f2933" font-size="11" font-family="DejaVu Sans Mono, monospace">unit: rad   tolerance: 0.001</text>
+<text x="632" y="156" fill="#1f2933" font-size="11" font-family="DejaVu Sans Mono, monospace">measured_on: 2026-08-29</text>
+<text x="632" y="172" fill="#1f2933" font-size="11" font-family="DejaVu Sans Mono, monospace">method: "captured on the arm"</text>
+<line x1="850" y1="135" x2="905" y2="135" stroke="#0b7285" stroke-width="2" marker-end="url(#ag)"/>
+<text x="858" y="124" fill="#0b7285" font-size="10" text-anchor="start" font-weight="bold">twin-truth</text>
+<text x="858" y="150" fill="#0b7285" font-size="10" text-anchor="start" font-weight="bold">generate</text>
+<rect x="910" y="68" width="130" height="30" rx="6" fill="white" stroke="#0b7285" stroke-width="1.5"/>
+<text x="975.0" y="88.0" text-anchor="middle" fill="#1f2933">truth.xacro</text>
+<text x="1046" y="88" fill="#7b8794" font-size="10">DO NOT EDIT</text>
+<rect x="910" y="108" width="130" height="30" rx="6" fill="white" stroke="#0b7285" stroke-width="1.5"/>
+<text x="975.0" y="128.0" text-anchor="middle" fill="#1f2933">truth.py</text>
+<text x="1046" y="128" fill="#7b8794" font-size="10">DO NOT EDIT</text>
+<rect x="910" y="148" width="130" height="30" rx="6" fill="white" stroke="#0b7285" stroke-width="1.5"/>
+<text x="975.0" y="168.0" text-anchor="middle" fill="#1f2933">truth.json</text>
+<text x="1046" y="168" fill="#7b8794" font-size="10">DO NOT EDIT</text>
+<rect x="910" y="188" width="130" height="30" rx="6" fill="white" stroke="#0b7285" stroke-width="1.5"/>
+<text x="975.0" y="208.0" text-anchor="middle" fill="#1f2933">truth.h</text>
+<text x="1046" y="208" fill="#7b8794" font-size="10">DO NOT EDIT</text>
+<rect x="910" y="240" width="240" height="34" rx="6" fill="white" stroke="#7b8794" stroke-width="1.5"/>
+<text x="1030.0" y="262.0" text-anchor="middle" fill="#1f2933">URDF, nodes, launch files, firmware</text>
+<line x1="975" y1="218" x2="975" y2="240" stroke="#7b8794" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="1160" y="262" fill="#1f2933" font-size="1" text-anchor="start"></text>
+<rect x="620" y="250" width="230" height="60" rx="6" fill="#e3fafc" stroke="#0b7285" stroke-width="1.5"/>
+<text x="735.0" y="276.0" text-anchor="middle" fill="#1f2933" font-weight="bold">twin-truth check</text>
+<text x="735.0" y="294.0" text-anchor="middle" fill="#7b8794" font-size="11">scan + validate + stale</text>
+<rect x="620" y="340" width="530" height="120" rx="6" fill="#f8f9fa" stroke="#7b8794"/>
+<text x="636" y="362" fill="#7b8794" font-size="11" text-anchor="start" font-style="italic">the whole repo, every commit (CI)</text>
+<text x="636" y="388" fill="#1f2933" font-size="11.5" font-family="DejaVu Sans Mono, monospace">src/nodes/homing_node.py      loads generated/truth.py         ok</text>
+<text x="636" y="410" fill="#e8590c" font-size="11.5" font-family="DejaVu Sans Mono, monospace" font-weight="bold">src/nodes/legacy_bridge.py:7  copy of home_pose_left           FAIL</text>
+<text x="636" y="432" fill="#e8590c" font-size="11.5" font-family="DejaVu Sans Mono, monospace" font-weight="bold">urdf/table.xacro:5            literal 1.100 = work_plane_m     FAIL</text>
+<line x1="735" y1="310" x2="735" y2="340" stroke="#0b7285" stroke-width="2" marker-end="url(#ag)"/>
+<rect x="620" y="480" width="530" height="40" rx="6" fill="#fff4e6" stroke="#e8590c"/>
+<text x="636" y="505" fill="#1f2933" font-size="12" text-anchor="start" font-weight="bold">exit 1: a pasted pose or a retyped height is a red build with a file and a line number.</text>
+</svg>
