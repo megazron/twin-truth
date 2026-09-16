@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "twin-truth"
+version = "0.1.0"
+description = "One dated source of truth for every physical constant in a digital twin, generated everywhere, with drift as a failing test."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Gaus Mohiuddin Sayyad", email = "maintainer@example.com" }]
+requires-python = ">=3.10"
+dependencies = ["pyyaml>=5.4"]
+keywords = ["robotics", "digital-twin", "urdf", "xacro", "ros2", "calibration", "single-source-of-truth"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+Homepage = "https://github.com/megazron/twin-truth"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+twin-truth = "twin_truth.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

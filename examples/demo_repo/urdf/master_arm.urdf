@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot name="master_arm">
+  <link name="base_link"/>
+  <link name="l1"/><link name="l2"/><link name="l3"/><link name="l4"/><link name="l5"/><link name="l6"/>
+  <joint name="joint_1" type="continuous"><parent link="base_link"/><child link="l1"/><origin xyz="0 0 0.023"/><axis xyz="0 0 1"/></joint>
+  <joint name="joint_2" type="revolute"><parent link="l1"/><child link="l2"/><origin xyz="0 0 0.0377"/><axis xyz="0 1 0"/></joint>
+  <joint name="joint_3" type="continuous"><parent link="l2"/><child link="l3"/><origin xyz="0 0 0.0423"/><axis xyz="0 0 1"/></joint>
+  <joint name="joint_4" type="revolute"><parent link="l3"/><child link="l4"/><origin xyz="0 0 0.0367"/><axis xyz="0 1 0"/></joint>
+  <joint name="joint_5" type="continuous"><parent link="l4"/><child link="l5"/><origin xyz="0 0 0.0403"/><axis xyz="0 0 1"/></joint>
+  <joint name="joint_6" type="revolute"><parent link="l5"/><child link="l6"/><origin xyz="0 0 0.0387"/><axis xyz="0 1 0"/></joint>
+</robot>

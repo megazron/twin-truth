@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="table">
+  <!-- the table height, typed in by hand instead of $(work_plane_m) -->
+  <link name="table_top">
+    <visual><origin xyz="0 0 1.100"/><geometry><box size="1.2 0.8 0.02"/></geometry></visual>
+  </link>
+</robot>

@@ -1,0 +1,74 @@
+# The physical facts of a two-arm rig, declared ONCE. Everything else is
+# generated from this file or checked against it.
+version: 1
+
+# Files the scanner may skip: reference-only material that is allowed to
+# quote the numbers because nothing executes it.
+allow:
+  - "docs/**"
+  - "config/real_home_reference.txt"
+
+constants:
+  home_pose_left:
+    value: [0.0, 0.2618, 3.1000, -2.2689, 0.0, 0.9599, 1.5708]
+    unit: rad
+    kind: joint_pose
+    continuous_joints: [0, 2, 4, 6]
+    measured_on: 2026-08-29
+    method: "solved by IK search as the presentation pose (2026-08-15); captured on the left arm 2026-08-29"
+    tolerance: 0.001
+    consumers: [urdf, python, json]
+
+  home_pose_right:
+    value: [0.0, -0.2618, -3.1000, -2.2689, 0.0, -0.9599, -1.6449]
+    unit: rad
+    kind: joint_pose
+    continuous_joints: [0, 2, 4, 6]
+    measured_on: 2026-08-29
+    method: "mirror of the left presentation pose; joint_7 stored wrapped (was 265.75 deg)"
+    tolerance: 0.001
+    consumers: [urdf, python, json]
+
+  work_plane_m:
+    value: 1.100
+    unit: m
+    kind: height
+    measured_on: 2026-08-18
+    method: "tape from the floor to the table top with the rig standing"
+    tolerance: 0.005
+    scan: true
+
+  wearer_upper_arm_mm:
+    value: 300.0
+    unit: mm
+    kind: size
+    measured_on: 2026-08-15
+    method: "tape, acromion to lateral epicondyle, default wearer"
+    tolerance: 5.0
+
+  link_j2_j4_mm:
+    value: 80.0
+    unit: mm
+    kind: length
+    measured_on: 2026-09-06
+    method: "tape on the built master arm, bend axis to bend axis"
+    tolerance: 1.5
+    urdf_span: [joint_2, joint_4]
+
+  link_j4_j6_mm:
+    value: 79.0
+    unit: mm
+    kind: length
+    measured_on: 2026-09-06
+    method: "tape on the built master arm, bend axis to bend axis"
+    tolerance: 1.5
+    urdf_span: [joint_4, joint_6]
+
+  link_j1_j2_mm:
+    value: 37.0
+    unit: mm
+    kind: length
+    measured_on: 2026-09-06
+    method: "tape; convention-dependent because joint_1 is a roll"
+    tolerance: 1.5
+    urdf_joints: [joint_1, joint_2]

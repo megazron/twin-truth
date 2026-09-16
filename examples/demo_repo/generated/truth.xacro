@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- GENERATED FROM truth.yaml BY twin-truth. DO NOT EDIT. Edit the truth file and regenerate. -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- home_pose_left: rad; measured 2026-08-29; solved by IK search as the presentation pose (2026-08-15); captured on the left arm 2026-08-29 -->
+  <xacro:property name="home_pose_left" value="0.0 0.2618 3.1 -2.2689 0.0 0.9599 1.5708"/>
+  <xacro:property name="home_pose_left_0" value="0.0"/>
+  <xacro:property name="home_pose_left_1" value="0.2618"/>
+  <xacro:property name="home_pose_left_2" value="3.1"/>
+  <xacro:property name="home_pose_left_3" value="-2.2689"/>
+  <xacro:property name="home_pose_left_4" value="0.0"/>
+  <xacro:property name="home_pose_left_5" value="0.9599"/>
+  <xacro:property name="home_pose_left_6" value="1.5708"/>
+  <!-- home_pose_right: rad; measured 2026-08-29; mirror of the left presentation pose; joint_7 stored wrapped (was 265.75 deg) -->
+  <xacro:property name="home_pose_right" value="0.0 -0.2618 -3.1 -2.2689 0.0 -0.9599 -1.6449"/>
+  <xacro:property name="home_pose_right_0" value="0.0"/>
+  <xacro:property name="home_pose_right_1" value="-0.2618"/>
+  <xacro:property name="home_pose_right_2" value="-3.1"/>
+  <xacro:property name="home_pose_right_3" value="-2.2689"/>
+  <xacro:property name="home_pose_right_4" value="0.0"/>
+  <xacro:property name="home_pose_right_5" value="-0.9599"/>
+  <xacro:property name="home_pose_right_6" value="-1.6449"/>
+  <!-- link_j1_j2_mm: mm; measured 2026-09-06; tape; convention-dependent because joint_1 is a roll -->
+  <xacro:property name="link_j1_j2_mm" value="37.0"/>
+  <!-- link_j2_j4_mm: mm; measured 2026-09-06; tape on the built master arm, bend axis to bend axis -->
+  <xacro:property name="link_j2_j4_mm" value="80.0"/>
+  <!-- link_j4_j6_mm: mm; measured 2026-09-06; tape on the built master arm, bend axis to bend axis -->
+  <xacro:property name="link_j4_j6_mm" value="79.0"/>
+  <!-- wearer_upper_arm_mm: mm; measured 2026-08-15; tape, acromion to lateral epicondyle, default wearer -->
+  <xacro:property name="wearer_upper_arm_mm" value="300.0"/>
+  <!-- work_plane_m: m; measured 2026-08-18; tape from the floor to the table top with the rig standing -->
+  <xacro:property name="work_plane_m" value="1.1"/>
+</robot>
