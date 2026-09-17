@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "One dated source of truth for every physical constant in a digital twin, generated everywhere, with drift as a failing test."
 readme = "README.md"
 license = { text = "MIT" }
-authors = [{ name = "Gaus Mohiuddin Sayyad", email = "maintainer@example.com" }]
+authors = [{ name = "Gaus Mohiuddin Sayyad" }]
 requires-python = ">=3.10"
 dependencies = ["pyyaml>=5.4"]
 keywords = ["robotics", "digital-twin", "urdf", "xacro", "ros2", "calibration", "single-source-of-truth"]
